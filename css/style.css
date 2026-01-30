@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container {
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.moon-stroke {
+    fill: transparent;
+    stroke: #FFC83D;
+    stroke-width: 4;
+
+    stroke-dasharray: 3000;
+    stroke-dashoffset: 3000;
+
+    animation: moonStroke 3s ease-in-out forwards;
+}
+
+.moon-fill {
+    fill: #FFF3B0;
+    opacity: 0;
+    
+    animation: moonFill 0.8s ease-in-out forwards;
+    animation-delay: 3s;
+}
+
+.draw-svg {
+  width: 100%;
+  max-width: 1290px;
+}
+
+.draw-path {
+  fill: none;                 
+  stroke: #fff;            
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+
+  animation: drawLine 4s ease forwards;
+}
+
+@keyframes drawLine {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes moonStroke {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes moonFill {
+    to {
+        opacity: 1;
+    }
+}
+
